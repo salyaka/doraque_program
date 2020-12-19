@@ -5,7 +5,7 @@ brave = Brave.new(name: "ゆうしゃ", hp: 238, offense: 203, defense: 129)
 monster = Monster.new(name: "アークデーモン", hp: 210, offense: 140, defense: 80)
 
 
-while true
+while  brave.hp > 0 && monster.hp > 0
   brave.attack(monster)
   monster.attack(brave) if monster.hp > 0
 
@@ -15,8 +15,6 @@ while true
     【#{monster.name}】HP: #{monster.hp}
     *=*=*=*=*=*=*=*=*=*=*
   TEXT
-
-  break if brave.hp <= 0 || monster.hp <= 0
 end
 
 if brave.hp > 0
