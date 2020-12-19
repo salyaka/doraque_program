@@ -7,8 +7,6 @@ class Monster < Character
     puts "#{brave.name}は#{offensive_power}のダメージを受けた！"
     brave.hp -= offensive_power
 
-    if brave.hp < 0
-      brave.hp = 0
-    end
+    brave.hp = 0 if brave.hp < 0
   end
 end
