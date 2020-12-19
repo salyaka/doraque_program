@@ -7,7 +7,7 @@ monster = Monster.new(name: "アークデーモン", hp: 210, offense: 140, defe
 
 while true
   brave.attack(monster)
-  monster.attack(brave)
+  monster.attack(brave) if monster.hp > 0
 
   puts <<~TEXT
     *=*=*=*=*=*=*=*=*=*=*
